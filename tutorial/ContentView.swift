@@ -6,16 +6,25 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack(spacing: 16) {
+                NavigationLink("lesson 1 sence") {
+                    Lesson1()
+                }
+                .buttonStyle(.borderedProminent)
+
+                NavigationLink("lesson 2 sence") {
+                    Lesson2()
+                }
+                .buttonStyle(.bordered)
+            }
+            .padding()
+            .navigationTitle("Tutorial")
         }
-        .padding()
     }
 }
 
